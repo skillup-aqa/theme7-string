@@ -7,5 +7,6 @@ public class ToTestCases {
         System.out.println("Sorting string array: " + String.join(", ", StringsSorter.sort(testArray)));
         System.out.println("Checking brackets: " + BracketsChecker.hasCorrectBrackets("(some(value))"));
         System.out.println("Atbash encode: " + AtbashCypher.encode("abcdefghijklmnopqrstuvwxyz + 15 zyx"));
+        System.out.println("Atbash decode: " + AtbashCypher.decode(AtbashCypher.encode("abcdefghijklmnopqrstuvwxyz + 15 zyx")));
     }
 }
