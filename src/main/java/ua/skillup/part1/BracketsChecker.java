@@ -2,15 +2,20 @@ package ua.skillup.part1;
 
 public class BracketsChecker {
     public static boolean hasCorrectBrackets(String str) {
-        int bracketCounter = 0;
+        int openedBrackets = 0;
+        int closedBrackets = 0;
         for (int i = 0; i < str.length(); i++) {
             if (str.charAt(i) == '(') {
-                bracketCounter++;
+                openedBrackets++;
             }
             if (str.charAt(i) == ')') {
-                bracketCounter--;
+                closedBrackets++;
             }
+            if (closedBrackets > openedBrackets) {
+                return false;
+            }
+
         }
-        return bracketCounter == 0;
+        return openedBrackets == closedBrackets;
     }
 }
