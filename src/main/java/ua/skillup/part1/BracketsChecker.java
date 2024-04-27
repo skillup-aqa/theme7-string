@@ -9,7 +9,7 @@ public class BracketsChecker {
             } else if (str.charAt(i) == ')') {
                 bracketsChecker--;
             }
-            if (bracketsChecker < 0){
+            if (bracketsChecker < 0) {
                 return false;
             }
         }
